@@ -1,0 +1,172 @@
+.second{
+    position: relative;
+    width: 100%;   
+    height: auto;   
+    display: flex;
+    flex-direction: row;  
+    align-items: stretch;    
+    @media screen and (max-width: $tableWidth) {
+        flex-direction: column;
+    }
+
+    &__left{
+        width: 53%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 2%;        
+        @media screen and (max-width: $tableWidth) {
+            width: 90%;
+            margin: 5% 5% 0 5%;
+            padding-bottom: 0;
+        }
+
+        &--fixed{
+
+        }
+
+        &__block{
+            width: auto;         
+            
+            &-h{
+                margin-top: 0!important;
+            }
+        }
+
+        &__btn{
+            display: inline-flex;
+            color: #232323;
+            text-decoration: none;
+            @media screen and (max-width: $tableWidth) {
+                display: none;
+            }
+        }
+    }
+
+    &__right{
+        width:  44%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        @media screen and (max-width: $tableWidth) {
+            width: 90%;
+            margin: 0 5%;
+        }
+
+        &__block{
+            width: 95.4%;
+            height: auto;
+            border: 0.125em solid #232323;                    
+            border-radius: 0.5em;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(44px);
+            @media screen and (max-width: $tableWidth) {
+                width: 100%;
+                border: 0.32em solid #232323;
+                border-radius: 2em;
+            }
+
+            &--marq{
+                width: 100%;
+                height: 25em;
+                position: relative;    
+                overflow: hidden;    
+                @media screen and (max-width: $tableWidth) {
+                    height: 40em;
+                }       
+
+                &-anim{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    animation: animScroll 6s infinite linear;
+                    @media screen and (max-width: $tableWidth) {
+                        display: block;
+                    }
+                }
+            }
+
+            &--link{
+                position: relative;
+                display: block;
+                width: 60%;
+                height: auto;
+                @media screen and (max-width: $tableWidth) {
+                    margin: -2% 20%;
+                }
+            }
+
+            &--img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            &--bot{
+                width: 80%;
+                margin: 5% 10%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                &--link{
+                    width: 25.6%;
+                    @media screen and (max-width: $tableWidth) {
+                        width: 35%;
+                    }
+                }
+            }
+
+            &--logo{
+                display: inline-block;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            &--other{
+                display: inline-block;
+                background: #fff;
+                border: 0.125em solid #232323;
+                border-radius: 2em;
+                padding: 0.25em 1em;
+                font-family: $mainFontBold;
+                color: #232323;
+                text-decoration: none;
+                @media screen and (max-width: $tableWidth) {
+                    font-size: 2em;
+                    padding: 1em 1.5em;
+                    border: 0.2em solid #232323;
+                }
+               
+            }
+        }
+
+        &__btn{
+            display: none;
+            margin: 10% 0 10% -15%;
+            color: #232323;
+            text-decoration: none;
+            @media screen and (max-width: $tableWidth) {
+                display: inline-flex;
+            }
+        }
+
+    }
+}
+
+@keyframes animScroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -49.5%)
+    }
+  }

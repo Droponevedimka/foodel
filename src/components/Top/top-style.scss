@@ -1,0 +1,299 @@
+.top{
+    position: absolute;
+    width: 98%;
+    height: 5em;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: row;      
+    background: transparent;
+    transition: background-color 1s ease-in-out;
+    z-index: 1;    
+    @media screen and (max-width: $tableWidth) {
+        height: auto;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    &.anim{     
+      position: fixed;
+      background: #9AF3FF;;
+      @media screen and (min-width: $tableWidth) {
+        border-bottom: 0.125em solid #2E2E33;
+      }
+    }
+
+    &.anim-mob &--back{
+      opacity: 1;
+    }
+
+    &.anim-mob {
+      @media screen and (max-width: $tableWidth) {
+        border-bottom: 0.4em solid #2E2E33;
+        background: #9AF3FF;
+      }
+    }
+
+    &.anim-mob &-logo{
+      @media screen and (max-width: $tableWidth) {
+        padding: 5%;
+      }
+    }
+
+    &-logo{
+      width: 19%;
+      height: 100%;      
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      @media screen and (max-width: $tableWidth) {
+        width: 22.57%; 
+        padding: 2.5% 5%;        
+      }
+
+      &-img{
+        width: 60.1%;
+        height: auto;
+        object-fit: contain;        
+        @media screen and (max-width: $tableWidth) {
+          width: 100%;
+        }
+      }
+    }
+
+    &-midl{
+      width: 36%;
+      height: 100%;      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1s ease-in-out;
+      overflow: hidden;
+      opacity: 0;
+      z-index: 2;
+      @media screen and (max-width: $tableWidth) {
+        display: none; 
+      }
+
+      &.anim{
+        opacity: 1;    
+        
+        width: calc(36% - 0.125em);
+      }
+
+      &-txt{
+        font-family: $mainFontBold;
+        font-size: 1em;
+        line-height: 1em;
+        width: 100%;
+        height: 100%;        
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 100%;
+        animation: scroll 8s infinite linear;
+      }
+    }
+
+    &-right{
+      width: 44%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;      
+      border-bottom: 0.125em solid #2E2E33;      
+      border-left: 0.125em solid #2E2E33;
+      transition: width 1s ease-in-out;
+      @media screen and (max-width: $tableWidth) {
+        position: absolute;
+        justify-content: flex-start;
+        width: 90%;
+        display: none;    
+        border: none;        
+      }
+
+      &.top-vis{
+        @media  screen and (max-width: $tableWidth) {
+          display: none;
+        }
+      }
+
+      &.base-vis{
+        display: none;        
+        @media  screen and (max-width: $tableWidth) {
+            height: auto;
+            display: block;
+        }
+      }
+
+      &.anim{
+        @media screen and (min-width: $tableWidth) {
+          border-bottom: none;        
+          border-left: none;
+          justify-content: flex-end;
+        }
+      }
+
+      &.anim-mob{
+        @media screen and (max-width: $tableWidth) {
+          justify-content: flex-end;
+          display: flex;
+          top: 3em;
+          right: 5%;
+        }
+      }
+
+      &.anim-mob &-link{
+        @media screen and (max-width: $tableWidth) {
+          width: 14em;
+          height: 14em;
+          border-radius: 14em;
+          background: #0EC645;
+          border: 0.35em solid #2E2E33;
+          margin-bottom: -3.5em;
+          margin-right: 0%;
+
+          &:before,
+          &:after {
+            opacity: 0;
+            display: none;
+          }
+        }
+      }
+
+      &.anim-mob &-first{
+        @media screen and (max-width: $tableWidth) {
+          opacity: 0;
+        }
+      }
+
+      &.anim-mob &-link-last{
+        @media screen and (max-width: $tableWidth) {
+          opacity: 1;
+        }
+      }
+
+      &.anim &-link{
+        @media screen and (min-width: $tableWidth) {
+          width: 7em;
+          height: 7em;
+          border-radius: 7em;
+          background: #0EC645;
+          border: 0.15em solid #2E2E33;
+          margin-bottom: -3.5em;
+          margin-right: 5%;
+
+          &:before,
+          &:after {
+            opacity: 0;            
+          }
+        }
+      }
+
+      &.anim &-first{
+        @media screen and (min-width: $tableWidth) {
+          opacity: 0;
+        }
+      }
+
+      &.anim &-link-last{
+        @media screen and (min-width: $tableWidth) {
+          opacity: 1;
+        }
+      }
+
+      &-link{
+        position: relative;
+        width: 60.8%;
+        height: 5.28em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -2em;        
+        overflow: hidden;
+        color: #2E2E33;
+        // transition: all 1s ease-in-out;
+        z-index: 1;
+        @media screen and (max-width: $tableWidth) {         
+          width: 40%;
+          margin-left: 5%;
+          height: 100%;         
+          text-decoration: none; 
+          display: block;
+          position: relative;
+        }
+
+        &:before,
+        &:after {
+          z-index: -1;
+          content: "";
+          position: absolute;
+          height: 1.8em;
+          width: 1.8em;
+          top: 1.75em;
+          border-radius: 50%; 
+          box-shadow: 0 0 0 11em #fff;
+          // transition: opacity 1s ease-in-out;
+          @media screen and (max-width: $tableWidth) {
+            box-shadow: 0 0 0 13em #fff;
+            height: 2.4em;
+            width: 2.4em;
+            top: 2.4em;
+          }
+        }
+        &:before {
+          left: -0.9em;
+        }
+        &:after {
+          right: -0.9em;
+        }       
+
+        &-last{
+          position: absolute;
+          left: 28%;
+          opacity: 0;
+          font-family: $mainFontBold;
+          font-size: 1em;
+          transition: opacity 1s ease-in-out;
+          @media screen and (max-width: $tableWidth) {
+            position: relative;
+            width: 50%;            
+            display: block;
+            font-size: 2.28em;
+            line-height: 1.1em;            
+            transform: translate(-50%, -50%);
+            margin: 50% 0 0 25%;
+            
+          }
+        }
+      }    
+      
+      &-first{
+        position: absolute;
+        width: 57%;    
+        height: auto;
+        object-fit: contain;
+        margin-bottom: -7%;
+        margin-left: -2%; 
+        pointer-events: none;
+        // transition: opacity 1s ease-in-out;  
+        z-index: 2;
+        @media screen and (max-width: $tableWidth) {
+          width: 38%;
+          margin-left: 5%;
+          margin-bottom: -3%;
+        }
+      }
+
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0)
+    }
+  }

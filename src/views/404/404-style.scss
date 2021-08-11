@@ -1,0 +1,67 @@
+.none{
+  position: relative;
+  height: auto;
+  width: 100%; 
+  min-height: 100vh;
+  max-width: 1920px;   
+  transition: background 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  div{
+    margin: 4% 0;
+    @media screen and (max-width: $tableWidth) {
+      margin: 15% 0 0 0;
+    }
+  }
+
+  &-logo{
+    width: 22%;
+    max-width: 424px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    @media screen and (max-width: $tableWidth) {
+      max-width: none;
+      width: 60%;
+    }
+  }
+  
+  &-err{
+    width: 9em;
+    height: 9em;
+    border-radius: 9em;
+    max-width: 289px;
+    max-height: 289px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8125em;
+    line-height: 1em;
+    @media screen and (max-width: $tableWidth) {
+      max-width: none;
+      max-height: none;
+      width: 3.5em;
+      height: 3.5em;
+      border-radius: 3.5em;
+      font-size: 16em;
+      font-family: $mainFontLight;
+      font-weight: 100;
+    }
+  }
+
+  &-main{
+    width: 55%;
+    max-width: 1054px;
+    height: auto;
+    object-fit: contain;
+    @media screen and (max-width: $tableWidth) {
+      width: 100%;
+      margin-top: -10%;
+    }
+  }
+
+}

@@ -1,0 +1,214 @@
+.third{
+    position: relative;
+    width: 100%;   
+    height: auto;   
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;    
+
+    &__title{
+        width: 70%;        
+        margin-left: 2%;
+        @media screen and (max-width: $tableWidth) {
+            width: 94%;
+            margin: 0 1% 0 5%;
+        }
+    }
+
+    &__posts{
+        width: 96%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        @media screen and (max-width: $tableWidth) {
+            display: none;
+        }
+
+        &__item{
+            width: 27%;
+            background: #fff;
+            border: 0.125em solid #2E2E33;
+            border-radius: 1em;
+            padding: 0 2%;            
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            cursor: pointer;            
+            @media screen and (max-width: $tableWidth) {
+                padding: 5% 10%;
+                border: 0.32em solid #232323;
+                position: relative;
+                margin: 0 10%;
+                left: -30%;
+            }
+
+            &:hover{
+                background: #0EC645;
+            }
+
+
+            &--title{
+                font-family: $mainFontBold;
+                margin-top: 5%;
+                @media screen and (max-width: $tableWidth) {
+                    font-size: 2.5em;
+                    line-height: 1.1em;
+                    text-align: left;
+                }
+            }
+
+            &--img{
+                width: 64%;
+                height: auto;
+                object-fit: contain;
+                margin-left: 16%;
+                @media screen and (max-width: $tableWidth) {
+                    width: 80%;
+                    margin-left: 20%;
+                    margin-top: 5%;
+                }
+
+                &.velo{
+                    margin-bottom: -20%;
+                    width: 54%;
+                    margin-left: 40%;
+                    @media screen and (max-width: $tableWidth) {
+                        margin-bottom: auto;
+                    }
+                }
+
+                &.banan{
+                    margin-bottom: -20%;
+                    width: 54%;
+                    margin-left: 40%;
+                    @media screen and (max-width: $tableWidth) {
+                        margin-bottom: auto;
+                    }
+                }
+
+                &.potate{
+                    margin-bottom: -20%;
+                    width: 100%;
+                    margin-left: 0;
+                    @media screen and (max-width: $tableWidth) {
+                        margin-bottom: auto;
+                    }
+                }   
+            }
+
+            &--likes{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 25%;
+                @media screen and (max-width: $tableWidth) {
+                    position: absolute;
+                    bottom: 5%;
+                    width: 20%;
+                }
+
+                &-img{
+                    width: 35%;
+                    height: auto;
+                    object-fit: contain;
+                    
+                    &.like{
+                        fill:#0EC645;
+                    }
+                }
+
+                &-nmr{
+                    font-family: $mainFontBold;
+                    @media screen and (max-width: $tableWidth) {
+                        font-size: 3em;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &__carousel{
+        display: none;
+        @media screen and (max-width: $tableWidth) {
+            display: block;
+            width: 90%;
+            margin: 0 5%;
+        }
+
+        .carousel__prev{
+            position: relative;
+            width: 4.55vw;            
+            height: 4.55vw;
+            max-width: 91px;
+            max-height: 91px;
+            border-radius: 4.55vw;
+            background-color: #fff;
+            border: 0.2em solid #232323;
+            transform: none;
+            top: auto;
+            left: auto;
+            svg{
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                color: #232323;
+            }
+            @media screen and (max-width: $tableWidth) {
+                max-height: none;
+                max-width: none;
+                width: 1.7em;
+                height: 1.7em;
+                border-radius: 1.7em;
+                border: 0.15em solid #232323;
+            }
+        }
+
+        .carousel__next{
+            position: relative;
+            width: 4.55vw;            
+            height: 4.55vw;
+            max-width: 91px;
+            max-height: 91px;
+            border-radius: 4.55vw;
+            background-color: #fff;
+            border: 0.2em solid #232323;
+            transform: none;
+            top: auto;
+            left: auto;
+            svg{
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                color: #232323;
+            }
+            @media screen and (max-width: $tableWidth) {
+                max-height: none;
+                max-width: none;
+                width: 1.7em;
+                height: 1.7em;
+                border-radius: 1.7em;
+                border: 0.15em solid #232323;
+            }
+        }
+    }
+
+    &__navigation{
+        display: flex;
+        width: 24%;
+        margin-left: 38%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: $tableWidth) {
+            width: 25%;
+            margin-left: 35%;
+            margin-top: 5%;
+        }
+    }
+}

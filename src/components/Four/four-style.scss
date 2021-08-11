@@ -1,0 +1,245 @@
+.four{
+    position: relative;
+    width: 100%;   
+    height: auto;   
+    display: flex;
+    flex-direction: row;  
+    align-items: stretch;  
+    margin-top: 5%;  
+    @media screen and (max-width: $tableWidth) {
+        flex-direction: column;
+    }
+
+    &__left{
+        width: 53%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 2%;
+        @media screen and (max-width: $tableWidth) {
+            width: 90%;
+            margin: 5% 5% 0 5%;
+            padding-bottom: 0;
+        }
+
+        &--delivery{
+            width: 63%;
+            height: auto;
+            object-fit: contain;
+            margin: 6% 0;
+            @media screen and (max-width: $tableWidth) {
+                width: 100%;
+                margin: 0 0 10% 0;
+            }
+        }
+
+        &__block{
+            width: auto;            
+        }
+
+        &__btn{
+            display: inline-flex;
+            color: #232323;
+            text-decoration: none;
+            @media screen and (max-width: $tableWidth) {
+                display: none;
+            }
+        }
+    }
+
+    &__right{
+        width:  44%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        @media screen and (max-width: $tableWidth) {
+            width: 90%;
+            margin: 0 5%;
+        }
+
+        &__block{
+            width: 75.4%;
+            height: auto;
+            border: 0.125em solid #232323;                  
+            border-radius: 0.5em;
+            padding: 5% 10% 5% 10%;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(44px);
+            @media screen and (max-width: $tableWidth) {
+                border: 0.32em solid #232323;
+                border-radius: 3em;
+            }
+            
+            h1{
+                text-align: center;                
+            }
+        }
+
+        &__carousel{
+            margin: 10% 0 5% 0;
+
+            &--txt{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                height: 3.845em;
+                margin: 0 20%;
+                background: #fff;
+                border: 0.125em solid #232323;
+                border-radius: 0.5em;
+                font-size: 0.94em;
+                line-height: 1.165em;
+                font-family: $mainFontBold;
+                @media screen and (max-width: $tableWidth) {
+                    font-size: 2.238em;
+                    line-height: 1.2em;
+                    width: 60%;
+                    height: 4.1em;
+                    margin-top: 5%;
+                    border: 0.2em solid #232323;
+                    border-radius: 1em;
+                }
+            }
+
+            &--slide{
+                width: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            &--img{
+                width: 80%;
+                margin-top: -4%;
+                height: auto;
+                object-fit: contain;
+
+                &.iphone{
+                    width: 60%;
+                }
+            }
+        }
+
+        &__navigation{
+            
+            @media screen and (max-width: $tableWidth) {
+                position: relative;
+                display: flex;
+                height: 4em;               
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 25%;
+                margin-left: 35%;       
+                margin-top: 8%;         
+            }
+        }
+
+        .carousel__prev{            
+            width: 4.55vw;            
+            height: 4.55vw;
+            max-width: 91px;
+            max-height: 91px;
+            border-radius: 4.55vw;
+            background-color: #fff;
+            border: 0.2em solid #232323;
+            margin-left: -3.5%;
+            
+            svg{
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                color: #232323;
+            }
+
+            @media screen and (max-width: $tableWidth) {
+                max-height: none;
+                max-width: none;
+                width: 1.7em;
+                height: 1.7em;
+                border-radius: 1.7em;
+                border: 0.15em solid #232323;
+                margin-left: auto;
+            }
+        }
+
+        .carousel__next{           
+            width: 4.55vw;            
+            height: 4.55vw;
+            max-width: 91px;
+            max-height: 91px;
+            border-radius: 4.55vw;
+            background-color: #fff;
+            border: 0.2em solid #232323;   
+            margin-right: -3.5%;      
+            
+            svg{
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                color: #232323;
+            }
+            @media screen and (max-width: $tableWidth) {
+                max-height: none;
+                max-width: none;
+                width: 1.7em;
+                height: 1.7em;
+                border-radius: 1.7em;
+                border: 0.15em solid #232323;
+                margin-right: auto;
+            }
+        }
+
+        &__desc{
+            text-align: center;         
+            line-height: 1.5em;   
+            margin-top: 5%;
+            font-weight: bold;
+            @media screen and (max-width: $tableWidth) {
+                font-size: 2.4em;
+                line-height: 1.2em;
+            }
+
+            span{
+                font-size: 0.6em;
+                color: rgba($color: #000000, $alpha: .5);
+                line-height: 1em;
+            }
+        }
+
+        &__link{
+            display: inline-flex;
+            width: auto;
+            text-align: center;
+            color: #0EC645;   
+            font-family: $mainFontBold;
+            font-size: 0.6875em;        
+            margin: 5% auto 0% 33%;            
+            text-decoration: none;
+            border-bottom: 0.175em solid #0EC645;
+            @media screen and (max-width: $tableWidth) {
+                font-size: 2em;
+                margin-left: 25%;
+                line-height: 1.2em;
+            }
+
+            &:hover{
+                color: #54545A; 
+                border-bottom: 0.175em solid #54545A;
+            }
+        }
+
+        &__btn{
+            display: none;
+            color: #232323;
+            text-decoration: none;
+            @media screen and (max-width: $tableWidth) {
+                display: inline-flex;
+                margin: 10% 0 10% -20%;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import './utils/fonts.scss';
+@import './utils/vars.scss';
+
+html{
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: $mainFont;
+    font-size: 32px;
+    line-height: 37.5px;
+    @media screen and (max-width: $desktopWidth) {
+        font-size: 1.6667vw;
+        line-height: 1.172em;
+    }
+    @media screen and (max-width: $desktopTextAdaptive) {
+        
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+        
+    }
+    @media screen and (max-width: $tableWidth) {
+        
+    }
+    @media screen and (max-width: $phoneWidth) {
+        
+    }
+    @media screen and (max-width: $smPhoneWidth) {
+        
+    }
+}
+
+#app{
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background 0.5s ease;
+}
+
+body{    
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;       
+}
+
+
+.br{
+
+    &__desk{
+        display: block;
+        @media screen and (max-width: $tableWidth) {
+            display: none;
+        }
+    }
+
+    &__mob{
+        display: none;
+        @media screen and (max-width: $tableWidth) {
+            display: block;
+        }
+    }
+}
+

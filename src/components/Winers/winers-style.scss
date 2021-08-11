@@ -1,0 +1,107 @@
+.winers{
+    position: relative;
+    width: 100%;   
+    height: auto;   
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;    
+
+    &__title{
+        width: 70%;        
+        margin-left: 2%;
+    }
+
+    &__all{
+        width: 100%;        
+        overflow: hidden;
+        position: relative;
+
+        &--marq{
+            position: relative;
+            width: max-content;
+            display: inline-flex;
+            flex-direction: row;
+            margin: 2% 0;            
+            @media screen and (max-width: $tableWidth) {
+                margin: 5% 0;
+            }
+        }
+        
+        &--block{
+            width: auto;
+            padding: 1.787em 2em;
+            background: #0EC645;
+            border: 0.125em solid #2E2E33;
+            border-radius: 1em;
+            display: inline-flex;
+            min-width: 150px;
+            flex-direction: column;
+            margin-right: 2em;
+            @media screen and (max-width: $tableWidth) {
+                padding: 3em 4em;
+                border: 0.3em solid #2E2E33;
+                margin-right: 5em;
+                min-width: 150px;
+            }
+            
+            &:nth-child(1){
+                margin-left: 2%;
+            }
+
+            &:nth-child(2n){
+                transform: rotate(-5deg);
+            }
+
+            &:nth-child(2n+1){
+                transform: rotate(5deg);
+            }
+        }
+
+        &--title{           
+            font-family: $mainFontBold;
+            display: inline-flex;
+            white-space: nowrap;
+            font-size: 1.375em;
+            @media screen and (max-width: $tableWidth) {
+                font-size: 3.197em;
+                line-height: 1em;
+            }
+        }
+
+        &--phone{
+            font-weight: bold;
+            font-size: 0.563em;
+            margin-top: 3%;
+            @media screen and (max-width: $tableWidth) {
+                font-size: 2.4em;
+                margin-top: 7%;
+            }
+        }
+
+
+    }
+
+    &__vis{
+        margin: 1% 0 7% 2%;
+        color: #0EC645;        
+        text-decoration: none;
+        border-bottom: 0.175em solid #0EC645;
+        font-size: 0.6875em;
+        font-family: $mainFontBold;
+        @media screen and (max-width: $tableWidth) {
+            font-size: 2.5em;
+            line-height: 1.2em;
+            margin-top: 6%;
+        }
+
+        &:hover{
+            color: #54545A; 
+            border-bottom: 0.175em solid #54545A;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50%, 0); }
+  }
